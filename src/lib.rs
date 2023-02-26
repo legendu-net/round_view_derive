@@ -1,6 +1,6 @@
 use proc_macro::TokenStream;
 use quote::quote;
-use syn::{DeriveInput};
+use syn::DeriveInput;
 
 #[proc_macro_derive(R2View)]
 pub fn r2_view_derive(input: TokenStream) -> TokenStream {
@@ -17,8 +17,7 @@ pub fn r2_view_derive(input: TokenStream) -> TokenStream {
                     rng_combs_r3: &mut self.rng_combs_r3,
                     rng_combs_r4: &mut self.rng_combs_r4,
                     play: &mut self.play,
-                    cache_16: &mut self.cache_16,
-                    cache_21: &mut self.cache_21,
+                    cache: &mut self.cache,
                 }
             }
         }
@@ -40,8 +39,7 @@ pub fn r3_view_derive(input: TokenStream) -> TokenStream {
                     rng_combs_r3: &mut self.rng_combs_r3,
                     rng_combs_r4: &mut self.rng_combs_r4,
                     play: &mut self.play,
-                    cache_16: &mut self.cache_16,
-                    cache_21: &mut self.cache_21,
+                    cache: &mut self.cache,
                 }
             }
         }
@@ -62,8 +60,7 @@ pub fn r4_view_derive(input: TokenStream) -> TokenStream {
                     rng_combs_r3: &self.rng_combs_r3,
                     rng_combs_r4: &mut self.rng_combs_r4,
                     play: &mut self.play,
-                    cache_16: &mut self.cache_16,
-                    cache_21: &mut self.cache_21,
+                    cache: &mut self.cache,
                 }
             }
         }

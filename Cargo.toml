@@ -2,7 +2,7 @@
 name = "round_view_derive"
 description = "Procedural macros to generate methods r2_view, r3_view, r4_view and r5_view."
 license = "MIT"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2021"
 
 [lib]
