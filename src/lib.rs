@@ -67,22 +67,3 @@ pub fn r4_view_derive(input: TokenStream) -> TokenStream {
     };
     gen.into()
 }
-
-#[proc_macro_derive(R5View)]
-pub fn r5_view_derive(input: TokenStream) -> TokenStream {
-    let ast: DeriveInput = syn::parse(input).unwrap();
-    let name = ast.ident;
-    let (impl_generics, ty_generics, where_clause) = ast.generics.split_for_impl();
-    let gen = quote! {
-        impl #impl_generics #name #ty_generics #where_clause {
-            #[inline(always)]
-            fn r5_view(&mut self) -> RoundFiveView {
-                RoundFiveView {
-                    rng_combs_r4: &self.rng_combs_r4,
-                    play: &mut self.play,
-                }
-            }
-        }
-    };
-    gen.into()
-}
