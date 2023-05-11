@@ -17,7 +17,6 @@ pub fn r2_view_derive(input: TokenStream) -> TokenStream {
                     rng_combs_r3: &mut self.rng_combs_r3,
                     rng_combs_r4: &mut self.rng_combs_r4,
                     play: &mut self.play,
-                    cache: &mut self.cache,
                 }
             }
         }
@@ -39,7 +38,6 @@ pub fn r3_view_derive(input: TokenStream) -> TokenStream {
                     rng_combs_r3: &mut self.rng_combs_r3,
                     rng_combs_r4: &mut self.rng_combs_r4,
                     play: &mut self.play,
-                    cache: &mut self.cache,
                 }
             }
         }
@@ -60,7 +58,6 @@ pub fn r4_view_derive(input: TokenStream) -> TokenStream {
                     rng_combs_r3: &self.rng_combs_r3,
                     rng_combs_r4: &mut self.rng_combs_r4,
                     play: &mut self.play,
-                    cache: &mut self.cache,
                 }
             }
         }
