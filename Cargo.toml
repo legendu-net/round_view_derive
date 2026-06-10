@@ -2,8 +2,8 @@
 name = "round_view_derive"
 description = "Procedural macros to generate methods r2_view, r3_view and r4_view."
 license = "MIT"
-version = "0.5.0"
-edition = "2021"
+version = "0.6.0"
+edition = "2024"
 
 [lib]
 proc-macro = true
